@@ -1,0 +1,28 @@
+{
+  "name": "app-navegador-Flash",
+  "version": "1.0.0",
+  "description": "App Navegador Flash",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "win32": "electron-builder --windows nsis:ia32"
+  },
+  "author": {
+    "name": ""
+  },
+  "build": {
+    "appId": "com.navegador.flash.app",
+    "directories": {
+      "app": ".",
+      "buildResources": "pepflash",
+      "output": "release"
+    },
+    "extraResources": [
+      "./pepflash/**"
+    ]
+  },
+  "devDependencies": {
+    "electron": "11.0.2",
+    "electron-builder": "^22.9.1"
+  }
+}
